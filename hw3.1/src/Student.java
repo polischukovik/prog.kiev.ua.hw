@@ -53,7 +53,7 @@ public class Student extends Human {
 	@Override
 	public boolean equals(Object obj) {
 		Student s = (Student) obj;
-		return super.equals((this.getLastName()+this.getFirstName()) == s.getLastName()+s.getFirstName());
+		return (this.getLastName()+this.getFirstName()).equals(s.getLastName()+s.getFirstName());
 	}
 	
 	

@@ -18,10 +18,10 @@ public class GroupNoStudentFound extends Exception {
 	@Override
 	public String toString() {
 		if (student != null) {
-			return student + " was not found";
+			return "ERROR: " + student + " was not found";
 		}
 		if (name != "") {
-			return name + " was not found";
+			return "ERROR: " + name + " was not found";
 		}
 		return "No student ";
 	}

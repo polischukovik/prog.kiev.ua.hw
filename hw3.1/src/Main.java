@@ -51,6 +51,22 @@ public class Main {
 		students.add(effieMaeda);
 		students.add(terrieUlrich);
 		
+		System.out.println("============\tAdd/Remove\t============");
+		
+		
+		try {
+			firstArt.addStudent(sherrylLight);
+			firstArt.addStudent(sherrylLight);
+		} catch (GroupIsFullException e) {
+			System.out.println(e);
+		} catch (GroupCourseDontMatchException e) {
+			System.out.println(e);
+		} catch (GroupException e) {
+			System.out.println(e);
+		}
+		firstArt.listGroup();
+		
+		
 		System.out.println("============\tArt\t============");
 		
 		for(Student student : students){

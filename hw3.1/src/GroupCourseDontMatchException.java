@@ -4,7 +4,7 @@ public class GroupCourseDontMatchException extends GroupException {
 	Student student; 
 	
 	public GroupCourseDontMatchException(){
-		System.out.println("Course does not match");
+		System.out.println("ERROR: " +"Course does not match");
 	}
 	
 	public GroupCourseDontMatchException(Student student){
@@ -13,7 +13,7 @@ public class GroupCourseDontMatchException extends GroupException {
 
 	@Override
 	public String toString() {
-		return (student != null)?"Student's " + student + " cource " + student.getCourse() + " does not match the group's course":"Course does not match";	
+		return (student != null)?"ERROR: " +"Student's " + student + " course " + student.getCourse() + " does not match the group's course":"ERROR: " +"Course does not match";	
 	}
 	
 	

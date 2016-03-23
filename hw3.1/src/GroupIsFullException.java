@@ -11,7 +11,7 @@ public class GroupIsFullException extends GroupException {
 
 	@Override
 	public String toString() {
-		return (student == null)?"Group id full, student can not be added":"Group id full, student " + student + " can not be added";
+		return (student == null)?"ERROR: " + "Group id full, student can not be added":"ERROR: " + "Group id full, student " + student + " can not be added";
 	}
 	
 	

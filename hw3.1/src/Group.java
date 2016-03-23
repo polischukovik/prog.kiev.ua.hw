@@ -38,7 +38,7 @@ public class Group {
 		
 		for (int i = 0; i < countStudArray(); i++){
 			if( students[i] != null && students[i].equals(student) ){
-				throw new GroupException( student + " is alreadi in " + this );
+				throw new GroupException( "ERROR: " + student + " is already in " + this );
 			}
 		}
 		
@@ -104,10 +104,11 @@ public class Group {
 	
 	@Override
 	public String toString() {
-		return "Group [groupName=" + groupName + ", groupCourse=" + groupCourse + ", capasity=" + capasity + "]";
+		return "Group [groupName=" + groupName + ", groupCourse=" + groupCourse + ", capasity=" + capasity + ", countStudents=" + countStudArray() +"]";
 	}
 	
 	public void listGroup(){
+		System.out.println();
 		System.out.println(this);
 		for( Student student : students){
 			System.out.println(student);
