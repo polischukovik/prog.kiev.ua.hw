@@ -27,7 +27,7 @@ public class Group {
 	}
 
 	public void addStudent(Student student) throws GroupException {
-		System.out.println(this + ": adding student " + student);
+		System.out.println("Adding student " + student);
 		
 		if( countStudArray() == capasity ){
 			throw new GroupIsFullException(student);
