@@ -26,7 +26,7 @@ public class Group {
 		this.groupCourse = groupCourse;
 	}
 
-	public void addStudent(Student student) throws GroupIsFullException, GroupCourseDontMatchException {
+	public void addStudent(Student student) throws GroupException {
 		System.out.println(this + ": adding student " + student);
 		
 		if( countStudArray() == capasity ){
@@ -35,6 +35,13 @@ public class Group {
 		if ( groupCourse != student.getCourse() ){
 			throw new GroupCourseDontMatchException(student);
 		}
+		
+		for (int i = 0; i < countStudArray(); i++){
+			if( students[i] != null && students[i].equals(student) ){
+				throw new GroupException( student + " is alreadi in " + this );
+			}
+		}
+		
 		students[countStudArray()] = student;	
 		System.out.println("Student added");
 	}	

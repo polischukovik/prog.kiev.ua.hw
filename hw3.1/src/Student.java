@@ -50,6 +50,12 @@ public class Student extends Human {
 				+ ", getGender()=" + getGender() + "]";
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		Student s = (Student) obj;
+		return super.equals((this.getLastName()+this.getFirstName()) == s.getLastName()+s.getFirstName());
+	}
+	
 	
 
 }
