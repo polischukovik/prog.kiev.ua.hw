@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Group {
 	private String groupName;
@@ -116,5 +117,8 @@ public class Group {
 		System.out.println();
 	}
 	
+	public void sortStudents(){
+		Arrays.sort(students);
+	}	
 	
 }

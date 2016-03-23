@@ -4,7 +4,7 @@
  * @author opolishc
  *
  */
-public class Student extends Human {
+public class Student extends Human implements Comparable {
 	
 	private int course = 0; 
 	private double averageMark = 0;
@@ -54,6 +54,15 @@ public class Student extends Human {
 	public boolean equals(Object obj) {
 		Student s = (Student) obj;
 		return (this.getLastName()+this.getFirstName()).equals(s.getLastName()+s.getFirstName());
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		if (o == null){
+			return -1;
+		}		
+		Student s = (Student) o;
+		return (s.getLastName()+getFirstName()).compareToIgnoreCase(this.getLastName()+this.getFirstName());
 	}
 	
 	
