@@ -62,6 +62,8 @@ public class Main {
 				break;
 			} catch (GroupCourseDontMatchException e) {
 				System.out.println(e);
+			} catch (GroupException e) {
+				System.out.println(e);
 			}
 		}
 		
@@ -76,6 +78,8 @@ public class Main {
 				break;
 			} catch (GroupCourseDontMatchException e) {
 				System.out.println(e);
+			} catch (GroupException e) {
+				System.out.println(e);
 			}
 		}
 		
@@ -89,6 +93,8 @@ public class Main {
 				System.out.println(e);
 				break;
 			} catch (GroupCourseDontMatchException e) {
+				System.out.println(e);
+			} catch (GroupException e) {
 				System.out.println(e);
 			}
 		}
