@@ -120,6 +120,11 @@ public class Main {
 		secondMath.listGroup();
 		secondChemistry.listGroup();
 		
+		System.out.println("============\tSorting group\t============");
+		secondChemistry.sortStudents();
+		
+		secondChemistry.listGroup();
+		
 	}
 
 }

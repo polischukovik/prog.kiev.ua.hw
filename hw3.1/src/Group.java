@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Group {
 	private String groupName;
@@ -117,8 +118,11 @@ public class Group {
 		System.out.println();
 	}
 	
+	/**
+	 * Sorts by lastName + firstName
+	 */
 	public void sortStudents(){
-		Arrays.sort(students);
+		Arrays.sort(students, Collections.reverseOrder());
 	}	
 	
 }
