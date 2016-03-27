@@ -1,5 +1,4 @@
-/Group.class
-/GroupCourseDontMatchException.class
-/GroupException.class
-/GroupIsFullException.class
-/Human.class
+/View.class
+/GroupWriter.class
+/SerializeHelper.class
+/ReadInput.class

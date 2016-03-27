@@ -1,13 +1,32 @@
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
+	private static ArrayList<Student> students;
+	
+	private static Group firstArt;
+	private static Group secondMath;
+	private static Group secondChemistry;
 
 	public static void main(String[] args) {
-		ArrayList<Student> students = new ArrayList<>();
 		
-		Group firstArt = new Group("Art", 1, 5);
-		Group secondMath = new Group("Math", 2, 10);
-		Group secondChemistry = new Group("Chemistry", 2, 10);
+				  
+		example();
+		
+		System.out.println("======== Saving group ========");
+		
+		GroupWriter gw = firstArt; 
+		gw.saveGroup(firstArt.getGroupName());
+		
+		
+	}
+
+	private static void example() {
+		students = new ArrayList<>();
+		
+		firstArt = new Group("Art", 1, 5);
+		secondMath = new Group("Math", 2, 10);
+		secondChemistry = new Group("Chemistry", 2, 10);
 		
 		Student sherrylLight = new Student("ME334235", "Sherryl", "Light", "female" , 1, 5.0);
 		Student paolaHollandsworth = new Student("ME334235", "Paola", "Hollandsworth", "female" , 1, 5.0);
@@ -124,7 +143,6 @@ public class Main {
 		secondChemistry.sortStudents();
 		
 		secondChemistry.listGroup();
-		
 	}
 
 }

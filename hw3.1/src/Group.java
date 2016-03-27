@@ -1,11 +1,40 @@
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class Group {
+import javax.imageio.stream.FileImageOutputStream;
+
+public class Group implements GroupWriter{
 	private String groupName;
 	private int groupCourse;
 	private int capasity;
 	private Student[] students;
+
+	@Override
+	public void saveGroup(String path) {
+		
+		SerializeHelper sh = new SerializeHelper();
+		sh.appendString( groupName);
+		sh.appendString(String.valueOf(groupCourse));
+		sh.appendString(String.valueOf(capasity));
+		sh.appendArray(students);
+		
+		File fileOut = new File(path);
+		
+		byte [] arr = sh.toString().getBytes();
+		
+		try (FileOutputStream fos = new FileOutputStream(fileOut);){
+			fos.write(arr, 0, arr.length);
+		} catch (FileNotFoundException e) {
+			System.out.println(e);
+		} catch (IOException e) {
+			System.out.println(e);
+		}
+		
+		System.out.println(sh.toString());
+		
+	}
 	
 	public Group(String groupName, int groupCourse, int capasity) {
 		super();
